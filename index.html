@@ -7,7 +7,7 @@
   <style>
     .typewriter {
       font-family: monospace;
-      font-size: 5em; /* Larger font for a heading title */
+      font-size: 3em; /* Larger font for a heading title */
       font-weight: bold;
       color: white;
       white-space: nowrap;
@@ -55,18 +55,24 @@
     }
 
     body {
-      background-color: black;
+      background-color: transparent;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
+
+    .container {
+      display: flex;
+      gap: 0.5em; /* Space between "Hello," and "I'm Noah Ndambuki" */
+    }
   </style>
 </head>
 <body>
-  <div class="typewriter hello">Hello,</div>
-  <div class="typewriter name"> I'm Noah Ndambuki</div>
+  <div class="container">
+    <div class="typewriter hello">Hello,</div>
+    <div class="typewriter name">I'm Noah Ndambuki</div>
+  </div>
 </body>
 </html>
