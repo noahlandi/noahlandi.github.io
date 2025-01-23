@@ -7,41 +7,23 @@
   <style>
     .typewriter {
       font-family: monospace;
-      font-size: 3em; /* Larger font for a heading title */
-      font-weight: bold;
+      font-size: 5em; /* Larger font for a heading title */
+      font-weight: bold; /* Optional: make it bold */
       color: white;
       white-space: nowrap;
       overflow: hidden;
       border-right: 4px solid white; /* Thicker cursor */
-    }
-
-    /* Animations */
-    .hello {
       width: 0;
-      animation: typeHello 2s steps(6) 1 normal both, blink 0.75s step-end infinite;
+      animation: typewriter 3s steps(23) 1 normal both, blink 0.75s step-end infinite;
+      animation-delay: 3s; /* Explicit delay */
     }
 
-    .name {
-      width: 0;
-      animation: typeName 3s steps(17) 1 normal both, blink 0.75s step-end infinite;
-      animation-delay: 2.5s; /* Pause after "Hello," */
-    }
-
-    @keyframes typeHello {
+    @keyframes typewriter {
       from {
         width: 0;
       }
       to {
-        width: 6ch; /* Length of "Hello," */
-      }
-    }
-
-    @keyframes typeName {
-      from {
-        width: 0;
-      }
-      to {
-        width: 17ch; /* Length of "I'm Noah Ndambuki" */
+        width: 23ch;
       }
     }
 
@@ -62,17 +44,9 @@
       height: 100vh;
       margin: 0;
     }
-
-    .container {
-      display: flex;
-      gap: 0.5em; /* Space between "Hello," and "I'm Noah Ndambuki" */
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="typewriter hello">Hello,</div>
-    <div class="typewriter name">I'm Noah Ndambuki</div>
-  </div>
+  <div class="typewriter">Hello, I'm Noah Ndambuki</div>
 </body>
 </html>
