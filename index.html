@@ -7,23 +7,28 @@
   <style>
     .typewriter {
       font-family: monospace;
-      font-size: 4.5em; /* Larger font for a heading title */
+      font-size: 4.4em; /* Larger font for a heading title */
       font-weight: bold; /* Optional: make it bold */
       color: white;
       white-space: nowrap;
       overflow: hidden;
       border-right: 4px solid white; /* Thicker cursor */
       width: 0;
-      animation: typewriter 3s steps(23) 1 normal both, blink 0.75s step-end infinite;
-      animation-delay: 3s; /* Explicit delay */
+      animation: typewriter 2s steps(18) 1 normal both, blink 0.75s step-end infinite;
     }
 
     @keyframes typewriter {
-      from {
-        width: 0;
+      0% {
+        width: 0ch;
       }
-      to {
-        width: 23ch;
+      15% {
+        width: 6ch; /* Stops at "Hello" */
+      }
+      30% {
+        width: 6ch; /* Pause at "Hello" */
+      }
+      100% {
+        width: 24ch; /* Completes the animation */
       }
     }
 
