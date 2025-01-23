@@ -8,22 +8,40 @@
     .typewriter {
       font-family: monospace;
       font-size: 5em; /* Larger font for a heading title */
-      font-weight: bold; /* Optional: make it bold */
+      font-weight: bold;
       color: white;
       white-space: nowrap;
       overflow: hidden;
       border-right: 4px solid white; /* Thicker cursor */
-      width: 0;
-      animation: typewriter 2s steps(13) 1 normal both, blink 0.75s step-end infinite;
-      animation-delay: 3s; /* Explicit delay */
     }
 
-    @keyframes typewriter {
+    /* Animations */
+    .hello {
+      width: 0;
+      animation: typeHello 2s steps(6) 1 normal both, blink 0.75s step-end infinite;
+    }
+
+    .name {
+      width: 0;
+      animation: typeName 3s steps(17) 1 normal both, blink 0.75s step-end infinite;
+      animation-delay: 2.5s; /* Pause after "Hello," */
+    }
+
+    @keyframes typeHello {
       from {
         width: 0;
       }
       to {
-        width: 13ch;
+        width: 6ch; /* Length of "Hello," */
+      }
+    }
+
+    @keyframes typeName {
+      from {
+        width: 0;
+      }
+      to {
+        width: 17ch; /* Length of "I'm Noah Ndambuki" */
       }
     }
 
@@ -37,8 +55,9 @@
     }
 
     body {
-      background-color: transparent;
+      background-color: black;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -47,6 +66,7 @@
   </style>
 </head>
 <body>
-  <div class="typewriter">Noah Ndambuki</div>
+  <div class="typewriter hello">Hello,</div>
+  <div class="typewriter name"> I'm Noah Ndambuki</div>
 </body>
 </html>
